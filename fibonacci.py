@@ -4,12 +4,15 @@ Created on Sat Sep 14 12:44:55 2019
 
 @author: alejandro
 """
-#%% fibonacci
+#%%
+#primos
 a=10
-l=[0,1]
-for i in range (2,a+1):
-  b=l[i-1]+l[i-2]
-  l.append(b)
-k=l[1:]
-print(k)
+l=[]
+for i in range (1,a+1):
+  for j in range (2,i):
+    if i%j == 0:
+      break
+  else:
+    l.append(i)
+print(l)
 # %%
